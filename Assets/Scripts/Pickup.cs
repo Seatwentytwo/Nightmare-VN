@@ -14,13 +14,17 @@ public class Pickup : MonoBehaviour
     {
         PickedUp = false;
         Collect = false;
-        Text = string.Empty;
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    void OnTriggerExit2D(Collider2D Player)
+    {
+        Text = string.Empty;
     }
 
     void OnTriggerStay2D(Collider2D Player)
