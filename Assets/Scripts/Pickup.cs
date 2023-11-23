@@ -1,37 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
     public bool PickedUp;
     public bool Collect;
+    public bool PlayerInside;
+    public int TextNumber;
     public string Text;
+
     public GameObject Pick;
+    public GameObject TextBox;
 
     // Start is called before the first frame update
     void Start()
     {
         PickedUp = false;
         Collect = false;
+        TextNumber = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    void OnTriggerExit2D(Collider2D Player)
-    {
-        Text = string.Empty;
-    }
-
-    void OnTriggerStay2D(Collider2D Player)
-    {
-        Text = "A Key";
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && PlayerInside == true)
         {
             Collect = true;
         }
@@ -39,7 +33,24 @@ public class Pickup : MonoBehaviour
         if (Collect == true)
         {
             PickedUp = true;
+            TextBox.SetActive(true);
             Pick.SetActive(false);
         }
+    }
+
+    void OnTriggerExit2D(Collider2D Player)
+    {
+        Text = string.Empty;
+        PlayerInside = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D Player)
+    {
+        PlayerInside = true;
+    }
+
+    void OnTriggerStay2D(Collider2D Player)
+    {
+        Text = "A Key";
     }
 }

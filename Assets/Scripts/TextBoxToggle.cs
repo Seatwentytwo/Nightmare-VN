@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class TextBoxToggle : MonoBehaviour
 {
-    public GameObject Placeholder_Textbox;
+    public Image PlaceHolder_Image;
 
     public bool DisplayingText;
 
@@ -19,13 +21,13 @@ public class TextBoxToggle : MonoBehaviour
     {
         if (DisplayingText == false)
         {
-            Placeholder_Textbox.SetActive(false);
+            PlaceHolder_Image.enabled = false;
         }
 
 
         else if (DisplayingText == true)
         {
-            Placeholder_Textbox.SetActive(true);
+            PlaceHolder_Image.enabled = true;
         }
     }
 }

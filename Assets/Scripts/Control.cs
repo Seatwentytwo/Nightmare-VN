@@ -27,6 +27,9 @@ public class Control : MonoBehaviour
             horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
             vertical = Input.GetAxisRaw("Vertical"); // -1 is down
         }
+
+        Paused = GameObject.FindWithTag("Item").GetComponent<Pickup>().PickedUp;
+
     }
 
     void FixedUpdate()

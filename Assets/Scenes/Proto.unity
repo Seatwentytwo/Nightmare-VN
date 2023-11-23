@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5823db99e5e4acc4da962e521ec2a47b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Placeholder_Textbox: {fileID: 1596919364}
+  PlaceHolder_Image: {fileID: 1596919366}
   DisplayingText: 0
 --- !u!1 &1354444242
 GameObject:
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 1354444245}
   m_Layer: 0
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -802,8 +802,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PickedUp: 0
   Collect: 0
+  PlayerInside: 0
+  TextNumber: 0
   Text: 
   Pick: {fileID: 1354444242}
+  TextBox: {fileID: 1596919364}
 --- !u!1 &1596919364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 1669190626}
+  CurrentText: 0
 --- !u!1 &2109044979
 GameObject:
   m_ObjectHideFlags: 0
