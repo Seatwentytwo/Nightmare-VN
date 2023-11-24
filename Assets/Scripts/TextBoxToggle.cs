@@ -8,6 +8,8 @@ public class TextBoxToggle : MonoBehaviour
 {
     public Image PlaceHolder_Image;
 
+    public GameObject Text;
+
     public bool DisplayingText;
 
     // Start is called before the first frame update
@@ -19,6 +21,8 @@ public class TextBoxToggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DisplayingText = Text.GetComponent<TextBox>().OpenTextbox;
+
         if (DisplayingText == false)
         {
             PlaceHolder_Image.enabled = false;

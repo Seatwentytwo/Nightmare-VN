@@ -7,25 +7,27 @@ public class Pickup : MonoBehaviour
 {
     public bool PickedUp;
     public bool Collect;
+    public bool Collectable;
     public bool PlayerInside;
+    
     public int TextNumber;
-    public string Text;
+    public int TextNumberSelect;
 
     public GameObject Pick;
-    public GameObject TextBox;
 
     // Start is called before the first frame update
     void Start()
     {
         PickedUp = false;
         Collect = false;
-        TextNumber = 1;
+        TextNumber = 0;
+        PlayerInside = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && PlayerInside == true)
+        if (Input.GetKeyDown(KeyCode.Space) && PlayerInside == true && Collectable == true)
         {
             Collect = true;
         }
@@ -33,24 +35,19 @@ public class Pickup : MonoBehaviour
         if (Collect == true)
         {
             PickedUp = true;
-            TextBox.SetActive(true);
             Pick.SetActive(false);
         }
     }
 
     void OnTriggerExit2D(Collider2D Player)
     {
-        Text = string.Empty;
         PlayerInside = false;
+        TextNumber = 0;
     }
 
     void OnTriggerEnter2D(Collider2D Player)
     {
         PlayerInside = true;
-    }
-
-    void OnTriggerStay2D(Collider2D Player)
-    {
-        Text = "A Key";
+        TextNumber = TextNumberSelect;
     }
 }
