@@ -4914,7 +4914,7 @@ Transform:
   m_GameObject: {fileID: 1209902604}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.44, y: 27.8, z: 0}
+  m_LocalPosition: {x: 0.17, y: -2.3, z: 0}
   m_LocalScale: {x: 2.8, y: 2.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5935,6 +5935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97382f7af1b5794c984ef461723a4f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeerIsDead: 0
+  TrapPlaced: 0
 --- !u!1 &1466670650
 GameObject:
   m_ObjectHideFlags: 0
@@ -6231,6 +6233,7 @@ GameObject:
   - component: {fileID: 1596230841}
   - component: {fileID: 1596230840}
   - component: {fileID: 1596230839}
+  - component: {fileID: 1596230843}
   m_Layer: 0
   m_Name: PlacedBeartrap
   m_TagString: Item
@@ -6250,6 +6253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd42437321a48841916d6d8d470fd88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TrapActivated: 0
 --- !u!61 &1596230840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6362,6 +6366,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1596230843
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596230838}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 3
 --- !u!1 &1608098973
 GameObject:
   m_ObjectHideFlags: 0
