@@ -1056,7 +1056,7 @@ Transform:
   m_GameObject: {fileID: 247725576}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9919214, y: 0.8533516, z: -0.99997985}
+  m_LocalPosition: {x: -1.001, y: 0.67, z: -0.99997985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1146,7 +1146,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.037191153, y: -0.23329353}
+  m_Offset: {x: 0.0010986328, y: -0.15044785}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1157,7 +1157,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4269595, y: 0.49795914}
+  m_Size: {x: 0.5035391, y: 0.33226776}
   m_EdgeRadius: 0
 --- !u!114 &247725580
 MonoBehaviour:
@@ -2802,7 +2802,6 @@ GameObject:
   - component: {fileID: 611450156}
   - component: {fileID: 611450157}
   - component: {fileID: 611450158}
-  - component: {fileID: 611450159}
   m_Layer: 0
   m_Name: Punch Glass 2 (1)
   m_TagString: Untagged
@@ -2922,19 +2921,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.42526913, y: 0.50133896}
   m_EdgeRadius: 0
---- !u!114 &611450159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611450155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d7eb4e9f0991459838fee19e5635e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PillsCollected: 0
 --- !u!1 &616970647
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,7 +3119,6 @@ GameObject:
   - component: {fileID: 643931939}
   - component: {fileID: 643931940}
   - component: {fileID: 643931941}
-  - component: {fileID: 643931942}
   m_Layer: 0
   m_Name: Punch Glass 2 (4)
   m_TagString: Untagged
@@ -3253,19 +3238,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.42696, y: 0.5013437}
   m_EdgeRadius: 0
---- !u!114 &643931942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643931938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d7eb4e9f0991459838fee19e5635e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PillsCollected: 0
 --- !u!1 &684196557
 GameObject:
   m_ObjectHideFlags: 0
@@ -4608,7 +4580,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15859343, y: 0}
+  m_Offset: {x: 0.34638298, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4619,7 +4591,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48718688, y: 0.28}
+  m_Size: {x: 0.07358718, y: 0.28}
   m_EdgeRadius: 0
 --- !u!82 &958505990
 AudioSource:
@@ -4728,7 +4700,6 @@ GameObject:
   - component: {fileID: 973532718}
   - component: {fileID: 973532719}
   - component: {fileID: 973532720}
-  - component: {fileID: 973532721}
   m_Layer: 0
   m_Name: Punch Glass 2 (2)
   m_TagString: Untagged
@@ -4848,19 +4819,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.42696, y: 0.5013428}
   m_EdgeRadius: 0
---- !u!114 &973532721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973532717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d7eb4e9f0991459838fee19e5635e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PillsCollected: 0
 --- !u!1 &1029992338
 GameObject:
   m_ObjectHideFlags: 0
@@ -9585,7 +9543,6 @@ GameObject:
   - component: {fileID: 1743929941}
   - component: {fileID: 1743929942}
   - component: {fileID: 1743929943}
-  - component: {fileID: 1743929944}
   m_Layer: 0
   m_Name: Punch Glass 2 (3)
   m_TagString: Untagged
@@ -9705,19 +9662,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4252691, y: 0.49796006}
   m_EdgeRadius: 0
---- !u!114 &1743929944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743929940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 954d7eb4e9f0991459838fee19e5635e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PillsCollected: 0
 --- !u!1 &1822180879
 GameObject:
   m_ObjectHideFlags: 0
