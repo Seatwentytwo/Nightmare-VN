@@ -7,6 +7,7 @@ public class Beartrap_collect : MonoBehaviour
     public bool TrapCollected;
     Renderer rend;
     Collider2D collide;
+    AudioSource Audio;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class Beartrap_collect : MonoBehaviour
         TrapCollected = false;
         rend = GetComponent<Renderer>();
         collide = GetComponent<Collider2D>();
+        Audio = GetComponent<AudioSource>();
 
         rend.enabled = true;
         collide.enabled = true;
@@ -30,5 +32,6 @@ public class Beartrap_collect : MonoBehaviour
         TrapCollected = true;
         rend.enabled = false;
         collide.enabled = false;
+        Audio.Play();
     }
 }

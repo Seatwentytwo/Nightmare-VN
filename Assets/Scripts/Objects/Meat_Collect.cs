@@ -9,6 +9,7 @@ public class Meat_Collect : MonoBehaviour
 
     Renderer rend;
     Collider2D collide;
+    AudioSource Audio;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class Meat_Collect : MonoBehaviour
 
         rend = GetComponent<Renderer>();
         collide = GetComponent<Collider2D>();
+        Audio = GetComponent<AudioSource>();
 
         rend.enabled = false;
         collide.enabled = false;
@@ -40,5 +42,6 @@ public class Meat_Collect : MonoBehaviour
         MeatCollected = true;
         rend.enabled = false;
         collide.enabled = false;
+        Audio.Play();
     }
 }

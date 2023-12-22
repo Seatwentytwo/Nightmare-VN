@@ -6,6 +6,7 @@ public class Beartrap_DeerKill : MonoBehaviour
 {
     Renderer rend;
     Collider2D collide;
+    AudioSource Audio;
 
     bool TrapCollected;
     public bool TrapActivated;
@@ -20,6 +21,7 @@ public class Beartrap_DeerKill : MonoBehaviour
 
         rend = GetComponent<Renderer>();
         collide = GetComponent<Collider2D>();
+        Audio = GetComponent<AudioSource>();
 
         collide.enabled = true;
         rend.enabled = false;
@@ -45,6 +47,7 @@ public class Beartrap_DeerKill : MonoBehaviour
             rend.enabled = true;
             collide.enabled = true;
             TrapActivated = true;
+            Audio.Play();
         }
     }
 }

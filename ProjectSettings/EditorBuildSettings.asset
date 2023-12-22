@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Hub2.unity
     guid: d3082258952583543aa5f095ed2d5de6
   - enabled: 1
-    path: Assets/Scenes/Hub4.unity
-    guid: 8eea9dbe2f34d6b48b974d08623dde54
-  - enabled: 1
     path: Assets/Scenes/Hub3.unity
     guid: 05b1e1eeb70a6444c98a248b73dff08a
+  - enabled: 1
+    path: Assets/Scenes/Hub4.unity
+    guid: 8eea9dbe2f34d6b48b974d08623dde54
   - enabled: 1
     path: Assets/Scenes/FinalClassroom.unity
     guid: a801c765cf48f0d429a9c4e2fece6a5d

@@ -10,6 +10,7 @@ public class BottleSpike : MonoBehaviour
 
     Collider2D collide;
     Renderer rend;
+    AudioSource Audio;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class BottleSpike : MonoBehaviour
 
         rend = GetComponent<Renderer>();
         collide = GetComponent<Collider2D>();
+        Audio = GetComponent<AudioSource>();
 
         rend.enabled = true;
         collide.enabled = true;
@@ -39,6 +41,7 @@ public class BottleSpike : MonoBehaviour
             SpikePunch = true;
             rend.enabled = false;
             collide.enabled = false;
+            Audio.Play();
         }
     }
 }

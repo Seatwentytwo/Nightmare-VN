@@ -7,6 +7,7 @@ public class FCutters_Collect : MonoBehaviour
     public bool CutterCollected;
     Renderer rend;
     Collider2D collide;
+    AudioSource Audio;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class FCutters_Collect : MonoBehaviour
         CutterCollected = false;
         rend = GetComponent<Renderer>();
         collide = GetComponent<Collider2D>();
+        Audio = GetComponent<AudioSource>();
 
         rend.enabled = true;
         collide.enabled = true;
@@ -30,5 +32,6 @@ public class FCutters_Collect : MonoBehaviour
         CutterCollected = true;
         rend.enabled = false;
         collide.enabled = false;
+        Audio.Play();
     }
 }
