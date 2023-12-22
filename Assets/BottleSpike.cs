@@ -8,12 +8,21 @@ public class BottleSpike : MonoBehaviour
     public bool SpikePunch;
     bool Punch_Collected;
 
+    Collider2D collide;
+    Renderer rend;
+
     // Start is called before the first frame update
     void Start()
     {
         PillsCollected = false;
         SpikePunch = false;
         Punch_Collected = false;
+
+        rend = GetComponent<Renderer>();
+        collide = GetComponent<Collider2D>();
+
+        rend.enabled = true;
+        collide.enabled = true;
     }
 
     // Update is called once per frame
@@ -28,6 +37,8 @@ public class BottleSpike : MonoBehaviour
         if (PillsCollected == true && Punch_Collected == true)
         {
             SpikePunch = true;
+            rend.enabled = false;
+            collide.enabled = false;
         }
     }
 }

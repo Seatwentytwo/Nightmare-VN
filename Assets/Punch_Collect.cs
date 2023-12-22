@@ -7,6 +7,7 @@ public class Punch_Collect : MonoBehaviour
     public bool PunchCollected;
     Renderer rend;
     Collider2D collide;
+    AudioSource Audio;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class Punch_Collect : MonoBehaviour
         PunchCollected = false;
         rend = GetComponent<Renderer>();
         collide = GetComponent<Collider2D>();
+        Audio = GetComponent<AudioSource>();
 
         rend.enabled = true;
         collide.enabled = true;
@@ -30,5 +32,6 @@ public class Punch_Collect : MonoBehaviour
         PunchCollected = true;
         rend.enabled = false;
         collide.enabled = false;
+        Audio.Play();
     }
 }
