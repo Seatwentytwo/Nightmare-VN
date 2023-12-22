@@ -2,33 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pills_Collect : MonoBehaviour
+public class Bully_Spike : MonoBehaviour
 {
-    public bool PillsCollected;
-    Renderer rend;
+    bool Spiked;
     Collider2D collide;
 
     // Start is called before the first frame update
     void Start()
     {
-        PillsCollected = false;
-        rend = GetComponent<Renderer>();
+        Spiked = false;
         collide = GetComponent<Collider2D>();
 
-        rend.enabled = true;
         collide.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Spiked = GameObject.Find("Bottle").GetComponent<BottleSpike>().SpikePunch;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        PillsCollected = true;
-        rend.enabled = false;
-        collide.enabled = false;
+        if (Spiked == true)
+        {
+            collide.enabled = false;
+        }
     }
 }

@@ -2,29 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BottleSpike : MonoBehaviour
+public class Warp3 : MonoBehaviour
 {
-    bool PillsCollected;
-    public bool SpikePunch;
+    public GameObject WarpExit;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
-        PillsCollected = false;
-        SpikePunch = false;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        PillsCollected = GameObject.Find("Pill").GetComponent<Pills_Collect>().PillsCollected;
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (PillsCollected == true)
+        if (collision.gameObject.tag == "Player")
         {
-            SpikePunch = true;
+            Player.transform.position = WarpExit.transform.position;
         }
     }
 }

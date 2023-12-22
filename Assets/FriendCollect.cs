@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pills_Collect : MonoBehaviour
+public class FriendCollect : MonoBehaviour
 {
-    public bool PillsCollected;
+    public bool FriendCollected;
     Renderer rend;
     Collider2D collide;
 
     // Start is called before the first frame update
     void Start()
     {
-        PillsCollected = false;
+        FriendCollected = false;
         rend = GetComponent<Renderer>();
         collide = GetComponent<Collider2D>();
 
@@ -27,7 +27,7 @@ public class Pills_Collect : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        PillsCollected = true;
+        FriendCollected = true;
         rend.enabled = false;
         collide.enabled = false;
     }
