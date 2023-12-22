@@ -2,25 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Deer : MonoBehaviour
+public class DogMeatDetect : MonoBehaviour
 {
-    bool PlayerDetected;
-    public bool DeerIsDead;
-    public bool TrapPlaced;
-    Animator animator;
-
+    bool MeatCollected;
     Renderer rend;
     Collider2D collide;
 
     // Start is called before the first frame update
     void Start()
     {
+        MeatCollected = false;
+
         rend = GetComponent<Renderer>();
         collide = GetComponent<Collider2D>();
-
-        animator = GetComponent<Animator>();
-
-        PlayerDetected = false;
 
         rend.enabled = true;
         collide.enabled = true;
@@ -29,18 +23,13 @@ public class Deer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerDetected = GameObject.Find("Deer Detect").GetComponent<Deer_Detection>().PlayerDetected;
-        TrapPlaced = GameObject.Find("PlacedBeartrap").GetComponent<Beartrap_DeerKill>().TrapActivated;
-
-        animator.SetBool("PlayerDetected", PlayerDetected);
+        MeatCollected = GameObject.Find("Meat").GetComponent<Meat_Collect>().MeatCollected;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Item" && TrapPlaced == true)
+        if (MeatCollected && collision.gameObject.tag == "Player")
         {
-            DeerIsDead = true;
-
             rend.enabled = false;
             collide.enabled = false;
         }
