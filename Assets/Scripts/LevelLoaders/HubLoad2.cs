@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HubLoad : MonoBehaviour
+public class HubLoad2 : MonoBehaviour
 {
+    private void Start()
+    {
+
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Hub");
+            SceneManager.LoadScene("Hub3");
         }
     }
 }
